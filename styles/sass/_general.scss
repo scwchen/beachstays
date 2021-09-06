@@ -6,4 +6,94 @@ $twilightBlue: #063974;
 $lightBlue: #D2F9F1;
 $spruce: #0C5F4C;
 
+// Fonts
+$lato: 'Lato', sans-serif;
+$playFair: 'Playfair Display SC', serif;
 
+
+/* ===========================================
+GENERAL & TYPOGRAPHY
+=========================================== */
+
+html {
+    font-size: 125%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: $black;
+    letter-spacing: 1px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+button {
+    border: none;
+    font-family: $playFair;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ===========================================
+HEADER
+=========================================== */
+
+header .wrapper {
+    background: url("../assets/beach-final-images/home-image-1.jpg") no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+.headerNav, h1 span {
+    text-transform: uppercase;
+}
+
+h1 {
+    color: $spruce;
+    font-size: 3.1rem; // 62px
+}
+
+h1 span {
+    color: $twilightBlue;
+    font-family: $playFair;
+    font-size: 4rem; // supposed to be 111.2px but that is ridiculous
+}
+
+.headerNav .logo {
+    font-family: $playFair;
+    font-size: 1.5rem; // 30px
+    color: $greenishCyan;
+}
+
+.headerNav, .headerNav ul {
+    display: flex;
+}
+
+.headerNav a {
+    color: $iceBlue;
+}
+
+.headerNav a[href="#home"] {
+    color: $greenishCyan;
+}
+
+.headerNav {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===========================================
+ABOUT
+=========================================== */
