@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,66 @@
     <script src="https://kit.fontawesome.com/69d6599dec.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display+SC:ital,wght@1,900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display+SC:ital,wght@1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
-    
+    <header class="contactHeader">
+        <div class="wrapper">
+            <nav class="headerNav contactNav">
+                <p class="logo">Beachstays</p>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <h1>Get in Touch</h1>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <section class="contact">
+
+                <form action="" class="contactForm">
+
+                    <label class="sr-only" for="name">Name</label>
+                    <input type="text" name="name" id="name">
+                    <label class="sr-only" for="email">Email Address</label>
+                    <input type="email" name="email" id="email">
+                    <label class="sr-only" for="message">Message</label>
+                    <input type="textarea" name="message" id="message" placeholder="Message">
+                    <button type="submit">Submit</button>
+                </form>
+                <div class="contactInfo">
+                    <!-- favicons -->
+                    <ul class="favicons">
+                        <li><i class="fab fa-facebook-f"></i></li>
+                        <li><i class="fab fa-instagram"></i></li>
+                        <li><i class="fab fa-linkedin-in"></i></li>
+                        <li><i class="fab fa-twitter"></i></li>
+                    </ul>
+                    <!-- <address class="mobileAddress"><a href="mailto:info@email.com">info@email.com, </a>123 - 456 - 7890
+                        123 some road. Toronto. ON
+                    </address> -->
+                    <address class="desktopAddress"><a href="mailto:info@email.com">info@email.com</a>
+                        123 - 456 - 7890
+                        123 some road,
+                        Toronto. ON
+                    </address>
+
+                </div>
+
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &#169 2019 HackerYou</p>
+    </footer>
 </body>
+
 </html>

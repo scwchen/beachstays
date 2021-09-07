@@ -25,6 +25,11 @@ body {
     letter-spacing: 1px;
 }
 
+.wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -50,11 +55,12 @@ img {
 HEADER
 =========================================== */
 
-header .wrapper {
+.homeHeader {
     background: url("../assets/beach-final-images/home-image-1.jpg") no-repeat;
     background-size: cover;
     height: 60vh;
 }
+
 
 .headerNav, h1 span {
     text-transform: uppercase;
@@ -85,7 +91,15 @@ h1 span {
     color: $iceBlue;
 }
 
-.headerNav a[href="#home"] {
+.homeNav a[href="#home"] {
+    color: $greenishCyan;
+}
+
+.contactNav a[href="#contact"] {
+    color: $greenishCyan;
+}
+
+.blogNav a[href="#blog"] {
     color: $greenishCyan;
 }
 
@@ -97,3 +111,65 @@ h1 span {
 /* ===========================================
 ABOUT
 =========================================== */
+
+
+
+/* ===========================================
+CONTACT FORM
+=========================================== */
+
+.contactForm input[type=textarea] {
+    resize: none;
+    height: 100px;
+    width: 100%;
+}
+
+
+
+.contactHeader {
+    background: url("../assets/beach-final-images/contact-image-1.jpg") no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+.contactHeader h1 {
+    font-size: 4rem; // supposed to be 87px but I still think that's too big
+    letter-spacing: 9px;
+    line-height: 3rem;
+    color: white;
+}
+
+
+.contactForm {
+    position: relative;
+}
+
+.contact {
+    display: flex;
+}
+
+// for now
+.contactForm {
+    width: 50%;
+}
+
+.contactInfo {
+    width: 30%;
+}
+
+/* ===========================================
+BLOG
+=========================================== */
+
+.blogHeader {
+    background: url("../assets/beach-final-images/blog-image-1.jpg") no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+.blogHeader h1 {
+    font-size: 4rem; // supposed to be 87px but I still think that's too big
+    letter-spacing: 9px;
+    line-height: 3rem;
+    color: white;
+}
