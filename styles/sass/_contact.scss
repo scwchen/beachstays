@@ -1,0 +1,46 @@
+/* ===========================================
+CONTACT FORM
+=========================================== */
+
+.contactNav a[href="#contact"] {
+    color: $greenishCyan;
+}
+
+.contactForm input[type=textarea] {
+    resize: none;
+    height: 100px;
+    width: 100%;
+}
+
+
+
+.contactHeader {
+    background: url("../assets/beach-final-images/contact-image-1.jpg") no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+.contactHeader h1 {
+    font-size: 4rem; // supposed to be 87px but I still think that's too big
+    letter-spacing: 9px;
+    line-height: 3rem;
+    color: white;
+}
+
+
+.contactForm {
+    position: relative;
+}
+
+.contact {
+    display: flex;
+}
+
+// for now
+.contactForm {
+    width: 50%;
+}
+
+.contactInfo {
+    width: 30%;
+}

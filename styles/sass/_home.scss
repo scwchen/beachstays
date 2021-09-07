@@ -1,0 +1,47 @@
+/* ===========================================
+HEADER
+=========================================== */
+
+.homeHeader {
+    background: url("../assets/beach-final-images/home-image-1.jpg") no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+.headerNav, h1 span {
+    text-transform: uppercase;
+}
+
+h1 {
+    color: $spruce;
+    font-size: 3.1rem; // 62px
+}
+
+h1 span {
+    color: $twilightBlue;
+    font-family: $playFair;
+    font-size: 4rem; // supposed to be 111.2px but that is ridiculous
+}
+
+.headerNav .logo {
+    font-family: $playFair;
+    font-size: 1.5rem; // 30px
+    color: $greenishCyan;
+}
+
+.headerNav, .headerNav ul {
+    display: flex;
+}
+
+.headerNav a {
+    color: $iceBlue;
+}
+
+.homeNav a[href="#home"] {
+    color: $greenishCyan;
+}
+
+.headerNav {
+    justify-content: space-between;
+    align-items: center;
+}
