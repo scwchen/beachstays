@@ -167,9 +167,41 @@ BLOG
     height: 60vh;
 }
 
-.blogHeader h1 {
+.blogArticle h1 {
     font-size: 4rem; // supposed to be 87px but I still think that's too big
     letter-spacing: 9px;
     line-height: 3rem;
     color: white;
+}
+
+.blogArticle {
+    border-bottom: 5px solid $greenishCyan;
+    border-right: 5px solid $greenishCyan;
+}
+
+.blogImage {
+    background: $greenishCyan;
+
+}
+
+.blog .wrapper {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-auto-rows: 100%;
+}
+
+.blogPost {
+    position: relative;
+    top: -10%;
+    left: -5%;
+}
+
+.blogPost h1 {
+    position: absolute;
+    top: -4rem;
+}
+
+.blogImage img {
+    // position: relative;
+    visibility: hidden;
 }
