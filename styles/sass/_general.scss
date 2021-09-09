@@ -10,11 +10,18 @@ $spruce: #0C5F4C;
 $lato: 'Lato', sans-serif;
 $playFair: 'Playfair Display SC', serif;
 
+// Using a few different sets of stylings for headers and such with similar formats
+@mixin fontStyles($size, $lineHeight, $letterSpacing) {
+    font-size: $size;
+    letter-spacing: $letterSpacing;
+    line-height: $lineHeight;
+}
 
 /* ===========================================
 GENERAL & TYPOGRAPHY
 =========================================== */
 
+// Made some changes from the style guide for what seems to work a little more aesthetically
 html {
     font-size: 125%;
 }
@@ -22,13 +29,30 @@ html {
 body {
     font-family: 'Lato', sans-serif;
     color: $black;
-    letter-spacing: 1px;
+    @include fontStyles(1rem, 1.6rem, 2px);
 }
 
 .wrapper {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
+}
+
+nav {
+    text-align: center;
+    @include fontStyles(1rem, 29px, 1px);
+}
+
+h1 {
+    @include fontStyles(3.1rem, 3.2rem, 6.7px);
+}
+
+h2 {
+    @include fontStyles(1.75rem, 2.9rem, 3.6px); 
+}
+
+h3 {
+    @include fontStyles(1.5rem, 2.9rem, 3.0px);
 }
 
 ul {
@@ -45,10 +69,16 @@ a {
 button {
     border: none;
     font-family: $playFair;
+    @include fontStyles(1rem, 1.6rem, 1px);
+    text-align: center;
+    background-color: $twilightBlue;
+    color: $iceBlue;
+    padding: 10px 15px;
 }
 
 img {
     max-width: 100%;
     display: block;
+    height: auto;
 }
 
