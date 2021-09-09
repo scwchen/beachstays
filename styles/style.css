@@ -259,6 +259,36 @@ nav {
   line-height: 29px;
 }
 
+.headerNav {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+}
+.headerNav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.headerNav .logo {
+  font-family: "Playfair Display SC", serif;
+  font-size: 1.7rem;
+  color: #50E3C2;
+}
+.headerNav li {
+  margin-left: 50px;
+}
+.headerNav li a {
+  color: #FAFFFE;
+}
+
 h1 {
   font-size: 3.1rem;
   letter-spacing: 6.7px;
@@ -269,12 +299,14 @@ h2 {
   font-size: 1.75rem;
   letter-spacing: 3.6px;
   line-height: 2.9rem;
+  color: #0C5F4C;
 }
 
 h3 {
   font-size: 1.5rem;
   letter-spacing: 3px;
   line-height: 2.9rem;
+  color: #0C5F4C;
 }
 
 ul {
@@ -307,6 +339,15 @@ img {
 }
 
 /* ===========================================
+FOOTER - Since footer is the same for each page
+=========================================== */
+footer {
+  text-align: center;
+  color: white;
+  background-color: #2C2C2C;
+}
+
+/* ===========================================
 HEADER
 =========================================== */
 .homeHeader {
@@ -335,12 +376,7 @@ HEADER
   width: 100%;
   height: 100%;
 }
-
-.headerNav, h1 span {
-  text-transform: uppercase;
-}
-
-header h1 {
+.homeHeader h1 {
   color: #0C5F4C;
   position: absolute;
   top: 50%;
@@ -349,40 +385,11 @@ header h1 {
           transform: translateX(-60%);
   z-index: 20;
 }
-
-h1 span {
+.homeHeader h1 span {
+  text-transform: uppercase;
   color: #063974;
   font-family: "Playfair Display SC", serif;
   font-size: 4rem;
-}
-
-.headerNav {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 20px 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.headerNav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.headerNav .logo {
-  font-family: "Playfair Display SC", serif;
-  font-size: 1.7rem;
-  color: #50E3C2;
-}
-.headerNav li {
-  margin-left: 50px;
-}
-.headerNav li a {
-  color: #FAFFFE;
 }
 
 .homeNav a[href="#home"] {
@@ -395,7 +402,6 @@ MAIN
 .about {
   margin: 75px 0;
 }
-
 .about .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -413,7 +419,6 @@ MAIN
 .aboutText p {
   padding-right: 50px;
 }
-
 .aboutText > * {
   margin: 10px 0;
 }
@@ -452,7 +457,7 @@ GALLERY
 MIDDLE NAVIGATION
 =========================================== */
 .middleNavigation {
-  margin: 75px 0 105px;
+  margin: 10% 0 15%;
 }
 
 .middleNavigation .wrapper {
@@ -487,9 +492,13 @@ PLAN AHEAD
   grid-template-columns: 1fr 1fr;
   gap: 5% 10%;
   background-color: #D2F9F1;
+  padding-bottom: 5%;
 }
 .planning img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 
 .plan.image {
@@ -498,12 +507,17 @@ PLAN AHEAD
   position: relative;
   top: -30px;
 }
+.plan h2 {
+  color: #063974;
+}
 
 .location.image {
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
   z-index: 10;
+  position: relative;
+  bottom: -30px;
   -webkit-box-shadow: -20px 20px #50E3C2;
           box-shadow: -20px 20px #50E3C2;
 }
@@ -541,19 +555,10 @@ FREE TRIP
 }
 .freeTrip .wrapper .freeTripText {
   text-align: center;
-  margin: 75px 0;
+  padding: 10% 10% 15%;
 }
 .freeTrip .wrapper .freeTripText > * {
   margin: 10px 0;
-}
-
-/* ===========================================
-FOOTER
-=========================================== */
-footer {
-  text-align: center;
-  color: white;
-  background-color: #2C2C2C;
 }
 
 /* ===========================================
@@ -613,9 +618,14 @@ BLOG
   height: 60vh;
 }
 
-.blogHeader h1 {
-  font-size: 4rem;
+.blogArticle h1 {
+  font-size: 3.5rem;
   letter-spacing: 9px;
-  line-height: 3rem;
-  color: white;
+  line-height: 4.5rem;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: 65% 25%;
+  grid-column-gap: 10%;
 }

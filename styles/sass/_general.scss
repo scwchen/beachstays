@@ -43,16 +43,41 @@ nav {
     @include fontStyles(1rem, 29px, 1px);
 }
 
+// headerNavs are similar through the pages
+.headerNav {
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+    display: flex;
+    text-transform: uppercase;
+    ul {
+        display: flex;
+    }
+    .logo {
+    font-family: $playFair;
+    font-size: 1.7rem; // 30px
+    color: $greenishCyan;
+    }
+    li {
+        margin-left: 50px;
+        a {
+            color: $iceBlue;
+        }
+    }
+}
+
 h1 {
     @include fontStyles(3.1rem, 3.2rem, 6.7px);
 }
 
 h2 {
     @include fontStyles(1.75rem, 2.9rem, 3.6px); 
+    color: $spruce;
 }
 
 h3 {
     @include fontStyles(1.5rem, 2.9rem, 3.0px);
+    color: $spruce;
 }
 
 ul {
@@ -82,3 +107,12 @@ img {
     height: auto;
 }
 
+/* ===========================================
+FOOTER - Since footer is the same for each page
+=========================================== */
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: $black;
+}

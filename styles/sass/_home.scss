@@ -29,52 +29,24 @@ HEADER
             height: 100%;
         }
     }
-}
 
-
-
-.headerNav, h1 span {
-    text-transform: uppercase;
-}
-
-header h1 {
-    color: $spruce;
-    
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translateX(-60%);
-    z-index: 20;
-    
-}
-
-h1 span {
-    color: $twilightBlue;
-    font-family: $playFair;
-    font-size: 4rem; // supposed to be 111.2px but that is ridiculous
-    
-}
-
-.headerNav {
-    justify-content: space-between;
-    padding: 20px 0;
-    align-items: center;
-    display: flex;
-    ul {
-        display: flex;
+    h1 {
+        color: $spruce;
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translateX(-60%);
+        z-index: 20;
     }
-    .logo {
-    font-family: $playFair;
-    font-size: 1.7rem; // 30px
-    color: $greenishCyan;
-    }
-    li {
-        margin-left: 50px;
-        a {
-            color: $iceBlue;
-        }
+    h1 span {
+        text-transform: uppercase;
+        color: $twilightBlue;
+        font-family: $playFair;
+        font-size: 4rem; // supposed to be 111.2px but that is ridiculous
     }
 }
+
+
 
 .homeNav a[href="#home"] {
     color: $greenishCyan;
@@ -88,23 +60,22 @@ MAIN
 
 .about {
     margin: 75px 0;
+    .wrapper {
+        display: flex;
+        align-items: center;
+    }
 }
 
-.about .wrapper {
-    display: flex;
-    align-items: center;
-}
-
+// Could have nested it all but figured I would refrain from nesting too deep
 .aboutText {
     flex: 1 0 70%;
 
     p {
         padding-right: 50px;
     }
-}
-
-.aboutText > * {
-    margin: 10px 0;
+    & > * {
+        margin: 10px 0;
+    }
 }
 
 .aboutImage {
@@ -140,7 +111,7 @@ MIDDLE NAVIGATION
 =========================================== */
 
 .middleNavigation {
-    margin: 75px 0 105px;
+    margin: 10% 0 15%;
 }
 
 .middleNavigation .wrapper {
@@ -173,22 +144,35 @@ PLAN AHEAD
     grid-template-columns: 1fr 1fr;
     gap: 5% 10%;
     background-color: $lightBlue;
+    padding-bottom: 5%;
     img {
+        object-fit: cover;
         width: 100%;
+        height: 100%;
     }
+    
 }
 
-.plan.image {
-    box-shadow: 20px 20px $greenishCyan;
-    position: relative;
-    top: -30px}
+.plan {
+    &.image {
+        box-shadow: 20px 20px $greenishCyan;
+        position: relative;
+        top: -30px;
+    }
+    h2 {
+        color: $twilightBlue;
+    }
+}
 
 .location {
 
     &.image {
         order: 4; // it will be offset in desktop orientation. Will change in mobile
         z-index: 10; // to overlap the next section
+        position: relative;
+        bottom: -30px;
         box-shadow: -20px 20px $greenishCyan;
+        
     }
     &.text .textContainer{
         text-align: right;
@@ -218,26 +202,9 @@ FREE TRIP
     flex-direction: column;
     .freeTripText {
         text-align: center; 
-        margin: 75px 0;
+        padding: 10% 10% 15%;
         & > * {
             margin: 10px 0;
-            
         }
     }
 }
-
-/* ===========================================
-FOOTER
-=========================================== */
-
-footer {
-    text-align: center;
-    color: white;
-    background-color: $black;
-}
-
-
-
-
-
-
