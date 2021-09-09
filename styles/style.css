@@ -449,6 +449,114 @@ GALLERY
 }
 
 /* ===========================================
+MIDDLE NAVIGATION
+=========================================== */
+.middleNavigation {
+  margin: 75px 0 105px;
+}
+
+.middleNavigation .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.middleNavigation .wrapper .navigation {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.middleNavigation .wrapper .navigation p {
+  grid-column: 2/3;
+}
+.middleNavigation .wrapper .navigation i {
+  color: white;
+}
+.middleNavigation .wrapper .navigation .icon-background {
+  color: #50E3C2;
+}
+
+/* ===========================================
+PLAN AHEAD
+=========================================== */
+.planning {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5% 10%;
+  background-color: #D2F9F1;
+}
+.planning img {
+  width: 100%;
+}
+
+.plan.image {
+  -webkit-box-shadow: 20px 20px #50E3C2;
+          box-shadow: 20px 20px #50E3C2;
+  position: relative;
+  top: -30px;
+}
+
+.location.image {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+  z-index: 10;
+  -webkit-box-shadow: -20px 20px #50E3C2;
+          box-shadow: -20px 20px #50E3C2;
+}
+.location.text .textContainer {
+  text-align: right;
+}
+
+.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.text .textContainer > * {
+  margin: 10px 0;
+}
+
+/* ===========================================
+FREE TRIP
+=========================================== */
+.freeTripImage img {
+  width: 100%;
+}
+
+.freeTrip .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.freeTrip .wrapper .freeTripText {
+  text-align: center;
+  margin: 75px 0;
+}
+.freeTrip .wrapper .freeTripText > * {
+  margin: 10px 0;
+}
+
+/* ===========================================
+FOOTER
+=========================================== */
+footer {
+  text-align: center;
+  color: white;
+  background-color: #2C2C2C;
+}
+
+/* ===========================================
 CONTACT FORM
 =========================================== */
 .contactNav a[href="#contact"] {

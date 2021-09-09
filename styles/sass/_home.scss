@@ -134,3 +134,110 @@ GALLERY
         }
     }
 }
+
+/* ===========================================
+MIDDLE NAVIGATION
+=========================================== */
+
+.middleNavigation {
+    margin: 75px 0 105px;
+}
+
+.middleNavigation .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .navigation {
+        display: grid;
+        grid-template-columns: 3rem 1fr; // the icons I want to stay put with the other content expanding as we go
+        align-items: center;
+        justify-content: center;
+        p {
+            grid-column: 2 / 3;
+            // to keep the h3 and p tags aligned with the i tags offset
+        }
+        i {
+        color: white;
+        }
+        .icon-background {
+            color: $greenishCyan;
+        }
+    }
+}
+
+/* ===========================================
+PLAN AHEAD
+=========================================== */
+
+.planning {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5% 10%;
+    background-color: $lightBlue;
+    img {
+        width: 100%;
+    }
+}
+
+.plan.image {
+    box-shadow: 20px 20px $greenishCyan;
+    position: relative;
+    top: -30px}
+
+.location {
+
+    &.image {
+        order: 4; // it will be offset in desktop orientation. Will change in mobile
+        z-index: 10; // to overlap the next section
+        box-shadow: -20px 20px $greenishCyan;
+    }
+    &.text .textContainer{
+        text-align: right;
+    }
+}
+
+.text {
+    display: flex;
+    align-items: center;
+
+    .textContainer > * {
+        margin: 10px 0; 
+    }
+}
+
+
+
+/* ===========================================
+FREE TRIP
+=========================================== */
+
+.freeTripImage img{
+    width: 100%;
+}
+.freeTrip .wrapper {
+    display: flex;
+    flex-direction: column;
+    .freeTripText {
+        text-align: center; 
+        margin: 75px 0;
+        & > * {
+            margin: 10px 0;
+            
+        }
+    }
+}
+
+/* ===========================================
+FOOTER
+=========================================== */
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: $black;
+}
+
+
+
+
+
+
