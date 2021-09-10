@@ -12,7 +12,7 @@ CONTACT
     margin-bottom: -40vh;
 }
 
-.contact .wrapper{
+.contact .wrapper {
     display: grid;
     grid-template-columns: 75% 20%;
     grid-column-gap: 5%;
@@ -23,9 +23,6 @@ CONTACT
         padding-bottom: 15%;
     }
     
-    h1 {
-        margin: 50px 0;
-    }
 }
 
 .formBox {

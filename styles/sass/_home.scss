@@ -7,8 +7,6 @@ HEADER
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
 }
 
 .homeHeaderBox {
@@ -62,8 +60,13 @@ MAIN
         align-items: center;
     }
     .aboutText {
+        display: flex;
+        flex-direction: column;
         flex: 1 0 70%;
+    }
 
+    .aboutTextBox {
+        
         p {
             padding-right: 50px;
         }
@@ -137,8 +140,8 @@ PLAN AHEAD
 .planning {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5% 10%;
     background-color: $lightBlue;
+    gap: 5% 10%;
     padding-bottom: 5%;
     img {
         object-fit: cover;
@@ -169,7 +172,6 @@ PLAN AHEAD
             text-align: right;
         }
     }
-
     
 }
 
@@ -181,7 +183,6 @@ PLAN AHEAD
         margin: 10px 0; 
     }
 }
-
 
 /* ===========================================
 FREE TRIP

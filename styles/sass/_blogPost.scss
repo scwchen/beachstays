@@ -21,17 +21,15 @@ BLOG ARTICLE
     grid-template-columns: 63% 23%;
     grid-template-rows: 53vh 1fr;
     grid-column-gap: 14%;
+    .blogPost {
+        grid-area: 1 / 1 / -1 / 2;
+    }
     p {
         letter-spacing: 1.5px;
     }
 }
 
-.blogPost {
-    grid-area: 1 / 1 / -1 / 2;
-    .blogArticle h1 {
-        margin: 50px 0;
-    }
-}
+
 
 .blogImage {
     margin-right: 20px; // to offset the box-shadow
@@ -104,7 +102,7 @@ COMMENTS
     display: grid;
     grid-template-columns: 47% 47%;
     grid-column-gap: 6%;
-    grid-row-gap: 10%;
+    grid-row-gap: 40px;
     textarea,
     button {
         grid-column: 1 / -1;

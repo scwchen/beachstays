@@ -1,0 +1,134 @@
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+    .headerNav h1,
+    .blog h1,
+    .contact h1 {
+        @include fontStyles(2.5rem, 4.8rem, 6.7px); 
+    }
+    .headerNav .logo {
+        font-size: 1rem; 
+    }
+
+    .headerNav label {
+        display: block;
+    }
+    .headerNav ul {
+        display: none;
+        & li:hover,
+        & li:focus-within {
+            background-color: rgba(80, 227, 194, 0.4);
+        }
+    }
+    
+    .gallery .imageContainer,
+    .middleNavigation .wrapper,
+    .planning,
+    .blog,
+    .blogForm, 
+    .commentBox .comment,
+    .contact .wrapper, 
+    .contactForm {
+        grid-template-columns: 1fr; 
+        & > * {
+            grid-column: auto;
+            grid-row: auto;
+        }
+    }
+
+    .navigation {
+        margin: 30px 0;
+    }
+
+    .location.image {
+        order: 3;
+    }
+
+    .blogWrapper {
+        padding: 0;
+    }
+
+    .planning,
+    .blogPost {
+        width: 90%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .planning {
+        gap: 0;
+        background-color: transparent;
+
+        & > * {
+            margin: 5% 0;
+        }
+        
+        .plan.text .textContainer,
+        .location.text .textContainer {
+            text-align: center;
+        }
+    }
+
+    .ourMission,
+    .commenter {
+        display: none;
+    }
+
+    .formBox {
+        left: 0;
+    }
+
+    .contactInfo {
+        align-items: center;
+        padding-bottom: 5%;
+        p {
+            text-align: center;
+        }
+    }
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+    .blog h1,
+    .contact h1, 
+    .homeHeaderBox h1,
+    .homeHeaderBox h1 span {
+        @include fontStyles(1.75rem, 2.9rem, 3.6px);
+    }
+
+    h2 {
+        @include fontStyles(1.5rem, 2.9rem, 3.0px);
+    }
+
+    input, textarea {
+        padding: 5px 10px;
+    }
+
+    .homeHeaderBox {
+        grid-row: 1 / -1;
+    }
+    
+    .homeHeaderBoxImage {
+        display: none;
+    }
+
+    .about .wrapper {
+        flex-direction: column-reverse;
+        .aboutImage {
+            margin: 25px 0 100px;
+        }
+        p {
+            padding: 0;
+        }
+    }
+    .aboutTextBox {
+        text-align: center;
+    }
+
+    .freeTrip .wrapper .freeTripText {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+

@@ -52,6 +52,7 @@ nav {
     align-items: center;
     display: flex;
     text-transform: uppercase;
+    position: relative;
     ul {
         display: flex;
     }
@@ -66,10 +67,35 @@ nav {
             color: $iceBlue;
         }
     }
+
 }
 
+.headerNav label {
+    font-size: 1.5rem;
+    color: $greenishCyan;
+    display: none;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.mobileNav:checked + ul {
+    display: block;
+    flex-direction: column;
+    background-color: rgba(6, 57, 116, 0.4); // twilight blue with lowered opacity
+    position: absolute;
+    right: 0;
+    top: 60px;
+
+    & li {
+        margin: 0;
+        padding: 10px 15px;
+    }
+}
+    
 h1 {
-    @include fontStyles(4.35rem, 2.9rem, 9px);
+    @include fontStyles(4.35rem, 8.5rem, 9px);
     color: $iceBlue;
 }
 
