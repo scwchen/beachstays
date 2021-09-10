@@ -48,7 +48,8 @@
     }
 
     .planning,
-    .blogPost {
+    .blogPost,
+    .ourMission {
         width: 90%;
         max-width: 1280px;
         margin: 0 auto;
@@ -68,9 +69,10 @@
         }
     }
 
-    .ourMission,
+    .missionImage,
     .commenter {
         display: none;
+        // The photos just kind of get in the way of the flow in smaller displays
     }
 
     .formBox {
@@ -84,6 +86,19 @@
             text-align: center;
         }
     }
+
+    .mission,
+    .recentPosts {
+        align-items: center;
+        text-align: center;
+    }
+
+    .recentPosts li {
+        font-style: italic;
+        &::before {
+            display: none;
+        }
+    } 
 
 }
 

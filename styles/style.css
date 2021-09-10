@@ -763,6 +763,15 @@ ASIDE
   margin: 15px 0 30px 5px;
 }
 
+.recentPosts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .recentPosts .recentPostsText {
   margin: 15px 0 30px 10px;
 }
@@ -927,7 +936,8 @@ CONTACT INFO - ASIDE
   }
 
   .planning,
-.blogPost {
+.blogPost,
+.ourMission {
     width: 90%;
     max-width: 1280px;
     margin: 0 auto;
@@ -945,7 +955,7 @@ CONTACT INFO - ASIDE
     text-align: center;
   }
 
-  .ourMission,
+  .missionImage,
 .commenter {
     display: none;
   }
@@ -962,6 +972,21 @@ CONTACT INFO - ASIDE
   }
   .contactInfo p {
     text-align: center;
+  }
+
+  .mission,
+.recentPosts {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+
+  .recentPosts li {
+    font-style: italic;
+  }
+  .recentPosts li::before {
+    display: none;
   }
 }
 /* Landscape phone to portrait tablet */

@@ -149,6 +149,8 @@ ASIDE
 }
 
 .recentPosts {
+    display: flex;
+    flex-direction: column;
     .recentPostsText {
         margin: 15px 0 30px 10px;
     }
