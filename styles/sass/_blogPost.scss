@@ -2,26 +2,166 @@
 BLOG
 =========================================== */
 
-.blogNav a[href="#blog"] {
-    color: $greenishCyan;
-}
-
 .blogHeader {
     background: url("../assets/beach-final-images/blog-image-1.jpg") no-repeat;
     background-size: cover;
-    height: 60vh;
+    height: 70vh;
+    .blogNav a[href="#blog"] {
+        color: $greenishCyan;
+    }
+    margin-bottom: -40vh;
 }
 
-.blogArticle h1 {
-    font-size: 3.5rem; // supposed to be 87px but I still think that's too big
-    letter-spacing: 9px;
-    line-height: 4.5rem;
-    
+
+.blogWrapper {
+    padding-left: 17%;
 }
 
 .blog {
     display: grid;
-    grid-template-columns: 65% 25%;
-    grid-column-gap: 10%;
+    grid-template-columns: 63% 23%;
+    grid-template-rows: 53vh 1fr;
+    grid-column-gap: 14%;
+    p {
+        letter-spacing: 1.5px;
+    }
 
+    .blogPost {
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+        .blogArticle h1 {
+            @include fontStyles(4.35rem, 2.9rem, 9px);
+            margin: 50px 0;
+            color: $iceBlue;
+        }
+    }
+
+    // the aside
+    .ourMission {
+        grid-area: 2 / 2 / -1 / -1;
+        h4 {
+            letter-spacing: 2px;
+            color: $twilightBlue;
+        }
+        p, a {
+            font-size: 0.9rem;
+        }
+        p {
+            line-height: 1.4rem;
+            letter-spacing: 2.5px;
+        }
+        a {
+            color: $spruce;
+            font-weight: 700;
+        }
+    }
+}
+
+.blogImage {
+    margin-right: 20px; // to offset the box-shadow
+    box-shadow: 30px 30px 0px -10px $greenishCyan;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.blogText {
+    border-right: 5px solid $greenishCyan;
+    border-bottom: 5px solid $greenishCyan;
+    padding: 100px 20px 50px;
+    
+    .blogWrapper {
+        p {
+            margin: 0 20px 30px 0;
+        }
+        p:nth-of-type(1) {
+            font-style: italic;
+            color: $twilightBlue;
+            letter-spacing: 0px;
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+    
+}
+
+
+.comments {
+    h3 {
+        color: $black;
+        letter-spacing: 1px;
+        margin: 35px 0;
+    }
+}
+
+.commentBox {
+    display: flex;
+    flex-direction: column;
+    .comment {
+        display: grid;
+        grid-template-columns: 13% 82%;
+        grid-column-gap: 5%;
+        margin-bottom: 7%;
+        .commenter img {
+            width: 100%;
+            height: auto;
+        }
+        .commentText {
+            padding-right: 10px;
+            p:first-child {
+                line-height: 1.1rem;
+                font-weight: 700;
+                color: $twilightBlue;
+                margin-bottom: 5px;
+            }
+        }
+        
+    }
+}
+
+
+.blogForm {
+    display: grid;
+    grid-template-columns: 47% 47%;
+    grid-column-gap: 6%;
+    grid-row-gap: 10%;
+    textarea,
+    button {
+        grid-column: 1 / -1;
+    }
+
+    textarea {
+        resize: none;
+        height: 200px;
+        border: 2px solid $greenishCyan;
+    }
+    margin-bottom: 20%;
+}
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    .missionText {
+        margin: 15px 0 30px 5px;
+    }
+}
+
+.recentPosts {
+    .recentPostsText {
+        margin: 15px 0 30px 10px;
+    }
+    li {
+        color: $black;
+        line-height: 1.6rem;
+    }
+    li::before {
+        content: "\2022";
+        color: $greenishCyan;
+        font-weight: bold;
+        display: inline-block;
+        width: 1.2rem;
+    }
 }

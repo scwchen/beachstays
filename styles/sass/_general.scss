@@ -30,6 +30,8 @@ body {
     font-family: 'Lato', sans-serif;
     color: $black;
     @include fontStyles(1rem, 1.6rem, 2px);
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .wrapper {
@@ -37,6 +39,7 @@ body {
     max-width: 1280px;
     margin: 0 auto;
 }
+
 
 nav {
     text-align: center;
@@ -80,6 +83,10 @@ h3 {
     color: $spruce;
 }
 
+h4 {
+    @include fontStyles(1.1rem, 1.45rem, 1px)
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -101,6 +108,14 @@ button {
     padding: 10px 15px;
 }
 
+input, textarea {
+    border: none;
+    border-bottom: 2px solid $greenishCyan;
+    @include fontStyles (1rem, 1.6rem, 2px);
+    padding: 25px 35px;
+    opacity: 0.7;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -113,6 +128,9 @@ FOOTER - Since footer is the same for each page
 
 footer {
     text-align: center;
-    color: white;
+    color: $iceBlue;
     background-color: $black;
+    p {
+        padding: 10px 0;
+    }
 }
