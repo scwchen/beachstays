@@ -293,9 +293,10 @@ nav {
 }
 
 h1 {
-  font-size: 3.1rem;
-  letter-spacing: 6.7px;
-  line-height: 3.2rem;
+  font-size: 4.35rem;
+  letter-spacing: 9px;
+  line-height: 2.9rem;
+  color: #FAFFFE;
 }
 
 h2 {
@@ -326,7 +327,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: #2C2C2C;
 }
 
 button {
@@ -358,18 +358,6 @@ img {
 }
 
 /* ===========================================
-FOOTER - Since footer is the same for each page
-=========================================== */
-footer {
-  text-align: center;
-  color: #FAFFFE;
-  background-color: #2C2C2C;
-}
-footer p {
-  padding: 10px 0;
-}
-
-/* ===========================================
 HEADER
 =========================================== */
 .homeHeader {
@@ -380,25 +368,21 @@ HEADER
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
-.homeHeader .homeHeaderBox {
+
+.homeHeaderBox {
   background: url("../assets/beach-final-images/home-image-1.jpg") no-repeat;
   background-size: cover;
   position: relative;
   grid-row: 1/11;
   grid-column: 1/-1;
 }
-.homeHeader .homeHeaderBoxImage {
-  grid-row: -1/5;
-  grid-column: 1/6;
-  z-index: 10;
+.homeHeaderBox .homeNav a[href="#home"] {
+  color: #50E3C2;
 }
-.homeHeader .homeHeaderBoxImage img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-.homeHeader h1 {
+.homeHeaderBox h1 {
+  font-size: 2.5rem;
+  letter-spacing: 6.7px;
+  line-height: 3.2rem;
   color: #0C5F4C;
   position: absolute;
   top: 50%;
@@ -407,15 +391,23 @@ HEADER
           transform: translateX(-60%);
   z-index: 20;
 }
-.homeHeader h1 span {
+.homeHeaderBox h1 span {
   text-transform: uppercase;
   color: #063974;
   font-family: "Playfair Display SC", serif;
   font-size: 4rem;
 }
 
-.homeNav a[href="#home"] {
-  color: #50E3C2;
+.homeHeaderBoxImage {
+  grid-row: -1/5;
+  grid-column: 1/6;
+  z-index: 10;
+}
+.homeHeaderBoxImage img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 /* ===========================================
@@ -432,20 +424,18 @@ MAIN
       -ms-flex-align: center;
           align-items: center;
 }
-
-.aboutText {
+.about .aboutText {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 70%;
           flex: 1 0 70%;
 }
-.aboutText p {
+.about .aboutText p {
   padding-right: 50px;
 }
-.aboutText > * {
+.about .aboutText > * {
   margin: 10px 0;
 }
-
-.aboutImage {
+.about .aboutImage {
   -webkit-box-shadow: -20px 20px #50E3C2;
           box-shadow: -20px 20px #50E3C2;
 }
@@ -522,18 +512,16 @@ PLAN AHEAD
   width: 100%;
   height: 100%;
 }
-
-.plan.image {
+.planning .plan.image {
   -webkit-box-shadow: 20px 20px #50E3C2;
           box-shadow: 20px 20px #50E3C2;
   position: relative;
   top: -30px;
 }
-.plan h2 {
+.planning .plan h2 {
   color: #063974;
 }
-
-.location.image {
+.planning .location.image {
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
@@ -543,7 +531,7 @@ PLAN AHEAD
   -webkit-box-shadow: -20px 20px #50E3C2;
           box-shadow: -20px 20px #50E3C2;
 }
-.location.text .textContainer {
+.planning .location.text .textContainer {
   text-align: right;
 }
 
@@ -584,51 +572,19 @@ FREE TRIP
 }
 
 /* ===========================================
-CONTACT FORM
+FOOTER - Since footer is the same for each page
 =========================================== */
-.contactNav a[href="#contact"] {
-  color: #50E3C2;
-}
-
-.contactForm input[type=textarea] {
-  resize: none;
-  height: 100px;
-  width: 100%;
-}
-
-.contactHeader {
-  background: url("../assets/beach-final-images/contact-image-1.jpg") no-repeat;
-  background-size: cover;
-  height: 60vh;
-}
-
-.contactHeader h1 {
-  font-size: 4rem;
-  letter-spacing: 9px;
-  line-height: 3rem;
+footer {
+  text-align: center;
   color: #FAFFFE;
+  background-color: #2C2C2C;
 }
-
-.contactForm {
-  position: relative;
-}
-
-.contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.contactForm {
-  width: 50%;
-}
-
-.contactInfo {
-  width: 30%;
+footer p {
+  padding: 10px 0;
 }
 
 /* ===========================================
-BLOG
+BLOG ARTICLE
 =========================================== */
 .blogHeader {
   background: url("../assets/beach-final-images/blog-image-1.jpg") no-repeat;
@@ -653,34 +609,12 @@ BLOG
 .blog p {
   letter-spacing: 1.5px;
 }
-.blog .blogPost {
-  grid-column: 1/2;
-  grid-row: 1/-1;
+
+.blogPost {
+  grid-area: 1/1/-1/2;
 }
-.blog .blogPost .blogArticle h1 {
-  font-size: 4.35rem;
-  letter-spacing: 9px;
-  line-height: 2.9rem;
+.blogPost .blogArticle h1 {
   margin: 50px 0;
-  color: #FAFFFE;
-}
-.blog .ourMission {
-  grid-area: 2/2/-1/-1;
-}
-.blog .ourMission h4 {
-  letter-spacing: 2px;
-  color: #063974;
-}
-.blog .ourMission p, .blog .ourMission a {
-  font-size: 0.9rem;
-}
-.blog .ourMission p {
-  line-height: 1.4rem;
-  letter-spacing: 2.5px;
-}
-.blog .ourMission a {
-  color: #0C5F4C;
-  font-weight: 700;
 }
 
 .blogImage {
@@ -710,6 +644,9 @@ BLOG
   font-weight: 700;
 }
 
+/* ===========================================
+COMMENTS
+=========================================== */
 .comments h3 {
   color: #2C2C2C;
   letter-spacing: 1px;
@@ -762,6 +699,28 @@ BLOG
   border: 2px solid #50E3C2;
 }
 
+/* ===========================================
+ASIDE
+=========================================== */
+.ourMission {
+  grid-area: 2/2/-1/-1;
+}
+.ourMission h4 {
+  letter-spacing: 2px;
+  color: #063974;
+}
+.ourMission p, .ourMission a {
+  font-size: 0.9rem;
+}
+.ourMission p {
+  line-height: 1.4rem;
+  letter-spacing: 2.5px;
+}
+.ourMission a {
+  color: #0C5F4C;
+  font-weight: 700;
+}
+
 .mission {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -789,4 +748,94 @@ BLOG
   font-weight: bold;
   display: inline-block;
   width: 1.2rem;
+}
+
+/* ===========================================
+CONTACT 
+=========================================== */
+.contactHeader {
+  background: url("../assets/beach-final-images/contact-image-1.jpg") no-repeat;
+  background-size: cover;
+  height: 70vh;
+  margin-bottom: -40vh;
+}
+.contactHeader .contactNav a[href="#contact"] {
+  color: #50E3C2;
+}
+
+.contact .wrapper {
+  display: grid;
+  grid-template-columns: 75% 20%;
+  grid-column-gap: 5%;
+  grid-template-rows: 30vh 1fr;
+}
+.contact .wrapper .contactSection {
+  grid-area: 1/1/-1/2;
+  padding-bottom: 15%;
+}
+.contact .wrapper h1 {
+  margin: 50px 0;
+}
+
+.formBox {
+  background: white;
+  padding: 8%;
+  position: relative;
+  left: -8%;
+  -webkit-box-shadow: 30px 30px 0px -10px #50E3C2;
+          box-shadow: 30px 30px 0px -10px #50E3C2;
+}
+
+.contactForm {
+  display: grid;
+  grid-template-columns: 47% 47%;
+  grid-column-gap: 6%;
+  grid-row-gap: 40px;
+}
+.contactForm textarea,
+.contactForm button {
+  grid-column: 1/-1;
+}
+.contactForm textarea {
+  resize: none;
+  height: 200px;
+  border: 2px solid #50E3C2;
+}
+
+/* ===========================================
+CONTACT INFO - ASIDE
+=========================================== */
+.contactInfo {
+  grid-area: 2/2/-1/-1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contactInfo .favicons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contactInfo .favicons ul li {
+  padding: 5px 10% 5px 0;
+  font-size: 1.3rem;
+}
+.contactInfo h4 {
+  color: #2C2C2C;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  line-height: 1.5rem;
+}
+.contactInfo > * {
+  padding: 5px 0;
+}
+.contactInfo p {
+  letter-spacing: 1px;
 }

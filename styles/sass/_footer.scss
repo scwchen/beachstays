@@ -1,0 +1,12 @@
+/* ===========================================
+FOOTER - Since footer is the same for each page
+=========================================== */
+
+footer {
+    text-align: center;
+    color: $iceBlue;
+    background-color: $black;
+    p {
+        padding: 10px 0;
+    }
+}

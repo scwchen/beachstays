@@ -27,50 +27,51 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <h1>Get in Touch</h1>
-        </div>
-    </header>
-    <main>
+        </div> <!-- end of wrapper -->
+    </header> <!-- end of contactHeader -->
+    
+    <main class="contact">
         <div class="wrapper">
-            <section class="contact">
-
-                <form action="" class="contactForm">
-
-                    <label class="sr-only" for="name">Name</label>
-                    <input type="text" name="name" id="name">
-                    <label class="sr-only" for="email">Email Address</label>
-                    <input type="email" name="email" id="email">
-                    <label class="sr-only" for="message">Message</label>
-                    <input type="textarea" name="message" id="message" placeholder="Message">
-                    <button type="submit">Submit</button>
-                </form>
-                <div class="contactInfo">
-                    <!-- favicons -->
-                    <ul class="favicons">
+            <section class="contactSection">
+                <h1>Get in Touch</h1>
+                <div class="formBox">
+                    <form action="" class="contactForm">
+                        <label class="sr-only" for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Name">
+                        <label class="sr-only" for="email">Email Address</label>
+                        <input type="email" name="email" id="email" placeholder="Email Address">
+                        <label class="sr-only" for="message">Comment</label>
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div> <!-- end of formBox -->
+            </section> <!-- end of contactSection -->
+    
+            <aside class="contactInfo">
+                <div class="favicons">
+                    <ul>
                         <li><i class="fab fa-facebook-f"></i></li>
                         <li><i class="fab fa-instagram"></i></li>
-                        <li><i class="fab fa-linkedin-in"></i></li>
                         <li><i class="fab fa-twitter"></i></li>
+                        <li><i class="fab fa-whatsapp"></i></li>
                     </ul>
-                    <!-- <address class="mobileAddress"><a href="mailto:info@email.com">info@email.com, </a>123 - 456 - 7890
-                        123 some road. Toronto. ON
-                    </address> -->
-                    <address class="desktopAddress"><a href="mailto:info@email.com">info@email.com</a>
-                        123 - 456 - 7890
-                        123 some road,
-                        Toronto. ON
-                    </address>
-
                 </div>
-
-            </section>
-        </div>
-    </main>
+                <div class="emailAddress">
+                    <a href="mailto:info@email.com"><h4>info@email.com</h4></a>
+                </div>
+                <div class="mailingAddress">
+                    <p>123 - 456 - 7890</p>
+                    <p>123 Queen Street West, Unit 10</p>
+                    <p>Toronto, Ontario</p>
+                    <p>M5V2D5</p>
+                </div>
+            </aside> <!-- end of contactInfo -->
+        </div> <!-- end of wrapper -->
+    </main> <!-- end of contact -->
 
     <footer>
-        <p>Copyright &#169 2019 HackerYou</p>
+        <p>Copyright &#169 2021 Juno College</p>
     </footer>
-    
 </body>
 
 </html>

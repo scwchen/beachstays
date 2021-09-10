@@ -1,5 +1,5 @@
 /* ===========================================
-BLOG
+BLOG ARTICLE
 =========================================== */
 
 .blogHeader {
@@ -11,7 +11,6 @@ BLOG
     }
     margin-bottom: -40vh;
 }
-
 
 .blogWrapper {
     padding-left: 17%;
@@ -25,35 +24,12 @@ BLOG
     p {
         letter-spacing: 1.5px;
     }
+}
 
-    .blogPost {
-        grid-column: 1 / 2;
-        grid-row: 1 / -1;
-        .blogArticle h1 {
-            @include fontStyles(4.35rem, 2.9rem, 9px);
-            margin: 50px 0;
-            color: $iceBlue;
-        }
-    }
-
-    // the aside
-    .ourMission {
-        grid-area: 2 / 2 / -1 / -1;
-        h4 {
-            letter-spacing: 2px;
-            color: $twilightBlue;
-        }
-        p, a {
-            font-size: 0.9rem;
-        }
-        p {
-            line-height: 1.4rem;
-            letter-spacing: 2.5px;
-        }
-        a {
-            color: $spruce;
-            font-weight: 700;
-        }
+.blogPost {
+    grid-area: 1 / 1 / -1 / 2;
+    .blogArticle h1 {
+        margin: 50px 0;
     }
 }
 
@@ -87,6 +63,9 @@ BLOG
     
 }
 
+/* ===========================================
+COMMENTS
+=========================================== */
 
 .comments {
     h3 {
@@ -121,7 +100,6 @@ BLOG
     }
 }
 
-
 .blogForm {
     display: grid;
     grid-template-columns: 47% 47%;
@@ -138,6 +116,29 @@ BLOG
         border: 2px solid $greenishCyan;
     }
     margin-bottom: 20%;
+}
+
+/* ===========================================
+ASIDE
+=========================================== */
+
+.ourMission {
+    grid-area: 2 / 2 / -1 / -1;
+    h4 {
+        letter-spacing: 2px;
+        color: $twilightBlue;
+    }
+    p, a {
+        font-size: 0.9rem;
+    }
+    p {
+        line-height: 1.4rem;
+        letter-spacing: 2.5px;
+    }
+    a {
+        color: $spruce;
+        font-weight: 700;
+    }
 }
 
 .mission {

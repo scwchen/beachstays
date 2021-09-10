@@ -40,13 +40,12 @@ body {
     margin: 0 auto;
 }
 
-
 nav {
     text-align: center;
     @include fontStyles(1rem, 29px, 1px);
 }
 
-// headerNavs are similar through the pages
+// headerNavs are the same throughout the pages
 .headerNav {
     justify-content: space-between;
     padding: 20px 0;
@@ -70,7 +69,8 @@ nav {
 }
 
 h1 {
-    @include fontStyles(3.1rem, 3.2rem, 6.7px);
+    @include fontStyles(4.35rem, 2.9rem, 9px);
+    color: $iceBlue;
 }
 
 h2 {
@@ -95,7 +95,6 @@ ul {
 
 a {
     text-decoration: none;
-    color: $black;
 }
 
 button {
@@ -120,17 +119,4 @@ img {
     max-width: 100%;
     display: block;
     height: auto;
-}
-
-/* ===========================================
-FOOTER - Since footer is the same for each page
-=========================================== */
-
-footer {
-    text-align: center;
-    color: $iceBlue;
-    background-color: $black;
-    p {
-        padding: 10px 0;
-    }
 }

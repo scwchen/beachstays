@@ -2,7 +2,6 @@
 HEADER
 =========================================== */
 
-// A bit of nesting to get used to it.
 .homeHeader {
     height: 90vh;
     display: grid;
@@ -10,48 +9,46 @@ HEADER
     grid-template-rows: repeat(12, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+}
 
-    .homeHeaderBox {
-        background: url("../assets/beach-final-images/home-image-1.jpg") no-repeat;
-        background-size: cover;
-        position: relative;
-        grid-row: 1 / 11;
-        grid-column: 1 / -1;
-    }
+.homeHeaderBox {
+    background: url("../assets/beach-final-images/home-image-1.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    grid-row: 1 / 11;
+    grid-column: 1 / -1;
 
-    .homeHeaderBoxImage {
-        grid-row: -1 / 5;
-        grid-column: 1 / 6;
-        z-index: 10;
-        img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
+    .homeNav a[href="#home"] {
+        color: $greenishCyan;
     }
 
     h1 {
+        @include fontStyles(2.5rem, 3.2rem, 6.7px);
         color: $spruce;
         position: absolute;
         top: 50%;
         left: 60%;
         transform: translateX(-60%);
         z-index: 20;
-    }
-    h1 span {
-        text-transform: uppercase;
-        color: $twilightBlue;
-        font-family: $playFair;
-        font-size: 4rem; // supposed to be 111.2px but that is ridiculous
+        span {
+            text-transform: uppercase;
+            color: $twilightBlue;
+            font-family: $playFair;
+            font-size: 4rem; // supposed to be 111.2px but that is ridiculous
+        }
     }
 }
 
-
-
-.homeNav a[href="#home"] {
-    color: $greenishCyan;
+.homeHeaderBoxImage {
+    grid-row: -1 / 5;
+    grid-column: 1 / 6;
+    z-index: 10;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
 }
-
 
 
 /* ===========================================
@@ -64,22 +61,20 @@ MAIN
         display: flex;
         align-items: center;
     }
-}
+    .aboutText {
+        flex: 1 0 70%;
 
-// Could have nested it all but figured I would refrain from nesting too deep
-.aboutText {
-    flex: 1 0 70%;
-
-    p {
-        padding-right: 50px;
+        p {
+            padding-right: 50px;
+        }
+        & > * {
+            margin: 10px 0;
+        }
     }
-    & > * {
-        margin: 10px 0;
-    }
-}
 
-.aboutImage {
-    box-shadow: -20px 20px  $greenishCyan;
+    .aboutImage {
+        box-shadow: -20px 20px  $greenishCyan;
+    }
 }
 
 /* ===========================================
@@ -151,32 +146,31 @@ PLAN AHEAD
         height: 100%;
     }
     
-}
+    .plan {
+        &.image {
+            box-shadow: 20px 20px $greenishCyan;
+            position: relative;
+            top: -30px;
+        }
+        h2 {
+            color: $twilightBlue;
+        }
+    }
 
-.plan {
-    &.image {
-        box-shadow: 20px 20px $greenishCyan;
-        position: relative;
-        top: -30px;
+    .location {
+        &.image {
+            order: 4; // it will be offset in desktop orientation. Will change in mobile
+            z-index: 10; // to overlap the next section
+            position: relative;
+            bottom: -30px;
+            box-shadow: -20px 20px $greenishCyan;
+        }
+        &.text .textContainer{
+            text-align: right;
+        }
     }
-    h2 {
-        color: $twilightBlue;
-    }
-}
 
-.location {
-
-    &.image {
-        order: 4; // it will be offset in desktop orientation. Will change in mobile
-        z-index: 10; // to overlap the next section
-        position: relative;
-        bottom: -30px;
-        box-shadow: -20px 20px $greenishCyan;
-        
-    }
-    &.text .textContainer{
-        text-align: right;
-    }
+    
 }
 
 .text {
@@ -189,14 +183,14 @@ PLAN AHEAD
 }
 
 
-
 /* ===========================================
 FREE TRIP
 =========================================== */
 
-.freeTripImage img{
+.freeTripImage img {
     width: 100%;
 }
+
 .freeTrip .wrapper {
     display: flex;
     flex-direction: column;
