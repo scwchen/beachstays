@@ -24,8 +24,10 @@ arrows.forEach((arrow) => {
 
 // Function to find which of the current image containers is active and visible in the carousel
 const getActive = () => {
+    const galleryImages = document.getElementsByClassName('galleryImage');
+
     // forEach apparently does not work for a Nodelist
-    for (image of document.getElementsByClassName('galleryImage')) {
+    for (image of galleryImages) {
         if (image.classList[2] === 'active') {
             return image.classList[1].replace('image', '');
         }
@@ -38,29 +40,44 @@ const movePics = (direction) => {
 
     // getting the selector for the active image
     const activeImage = document.querySelector(`.image${active}`);
-    
+    const activeCircle = document.querySelector(`.circle${active}`);
+
     if (direction === 'left') {
         // Only if the carousel is not all the way to the left already
         if (active !== 1) {
-            // getting the selector for the previous (left) image
+            // getting the selector for the previous (left) image and tracker circle
             const prevImage = document.querySelector(`.image${active - 1}`);
+            const prevCircle = document.querySelector(`.circle${active - 1}`);
+
             activeImage.classList.toggle('active');
             activeImage.classList.toggle('right');
-            // with this logic the prevImage will always be 'left' of the active
+            activeCircle.classList.toggle('fas');
+            activeCircle.classList.toggle('far');
+
+            // with this logic the prevImage and prevCircle will always be 'left' of the active
             prevImage.classList.toggle('active');
             prevImage.classList.toggle('left');
-            
+            prevCircle.classList.toggle('fas');
+            prevCircle.classList.toggle('far');
+
         }
     } else if (direction = 'right') {
         // Only if the carousel is not all the way to the right already
         if (active !== 5) {
-            // getting the selector for the next (right) image
+            // getting the selector for the next (right) image and tracker circle
             const nextImage = document.querySelector(`.image${active + 1}`);
+            const nextCircle = document.querySelector(`.circle${active + 1}`);
+
             activeImage.classList.toggle('active');
             activeImage.classList.toggle('left');
-            // with this logic the prevImage will always be 'left' of the active
+            activeCircle.classList.toggle('fas');
+            activeCircle.classList.toggle('far');
+
+            // with this logic the nextImage and nextCircle will always be 'right' of the active
             nextImage.classList.toggle('active');
             nextImage.classList.toggle('right');
+            nextCircle.classList.toggle('fas');
+            nextCircle.classList.toggle('far');
         }
     }
     
