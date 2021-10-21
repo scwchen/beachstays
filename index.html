@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project One - Home Page</title>
+    <title>Beachstays</title>
     <script src="https://kit.fontawesome.com/69d6599dec.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,16 +23,16 @@
                     <p class="logo">Beachstays</p>
                     <label for="hamburger"><i class="fas fa-bars"></i></label>
                     <input class="mobileNav" type="checkbox" name="hamburger" id="hamburger" autocomplete="off">
-                    <ul class="navList"> 
+                    <ul class="navList">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="./blogPost.html">Blog</a></li>
                         <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </nav>
-    
+
                 <h1>welcome to <span>Beachstays</span></h1>
-    
+
             </div> <!-- end of wrapper -->
         </div> <!-- end of homeHeaderBox -->
 
@@ -40,7 +40,7 @@
             <img src="./assets/beach-final-images/header-box.jpg" alt="Sunglasses on the beach.">
         </div> <!-- end of homeHeaderBoxImage -->
     </header> <!-- end of homeHeader -->
-    
+
     <main>
 
         <section id="about" class="about">
@@ -48,135 +48,157 @@
                 <div class="aboutText">
                     <div class="aboutTextBox">
                         <h2>Visit Guyana</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla
+                            elementum
                             eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis
                             convallis dapibus nulla pulvinar
                             tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla
-                            elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci
+                            elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum
+                            orci
                             quis convallis.</p>
                         <button>Find Out More</button>
                     </div>
                 </div> <!-- end of aboutText -->
-    
+
                 <div class="aboutImage">
                     <img src="./assets/beach-final-images/small-box.jpg" alt="Luxury suite overlooking the ocean.">
                 </div> <!-- end of aboutImage -->
             </div> <!-- end of wrapper -->
         </section> <!-- end of about -->
 
+        <!-- Adding an image carousel for fun -->
+
         <section class="gallery">
             <div class="wrapper">
                 <div class="imageContainer">
-                    <div class="image image1"><img src="./assets/beach-final-images/gallery-image1.jpg"
+                    <!-- added chevrons -->
+                    <button class="leftArrow arrow"><i class="fas fa-chevron-left"></i></button>
+                    <button class="rightArrow arrow"><i class="fas fa-chevron-right"></i></button>
+                    <!-- just added some of the existing assets to the gallery images -->
+                    <div class="galleryImage image1 left"><img src="./assets/beach-final-images/left-image.jpg"
+                            alt="Sunny view of top floor of suite."></div>
+                    <div class="galleryImage image2 left"><img src="./assets/beach-final-images/gallery-image1.jpg"
                             alt="Evening view of an oceanside suite."></div>
-                    <div class="image image2"><img src="./assets/beach-final-images/gallery-image2.jpg"
+                    <div class="galleryImage image3 active"><img src="./assets/beach-final-images/gallery-image2.jpg"
                             alt="Secluded rear entrance of private suite."></div>
-                    <div class="image image3"><img src="./assets/beach-final-images/gallery-image3.jpg"
+                    <div class="galleryImage image4 right"><img src="./assets/beach-final-images/gallery-image3.jpg"
                             alt="View of suite from the beach."></div>
+                    <div class="galleryImage image5 right"><img src="./assets/beach-final-images/right-image.jpg"
+                            alt="Beautiful secluded beach and cove."></div>
                 </div> <!-- end of imageContainer -->
             </div> <!-- end of wrapper -->
+
+            <div class="carouselTracker">
+                <!-- <i class="fas fa-circle"></i> -->
+                <i class="far fa-circle circle1"></i>
+                <i class="far fa-circle circle2"></i>
+                <i class="fas fa-circle circle3"></i>
+                <i class="far fa-circle circle4"></i>
+                <i class="far fa-circle circle5"></i>
+            </div>
         </section> <!-- end of gallery -->
 
-            <section class="middleNavigation">
-                <div class="wrapper">
-                    <div class="navigation navigation1">
-        
-                        <span class="fa-stack">
-                            <i class="fa fa-circle fa-stack-2x icon-background"></i>
-                            <i class="fa fa-home fa-stack-1x"></i>
-                        </span>
+        <section class="middleNavigation">
+            <div class="wrapper">
+                <div class="navigation navigation1">
 
-                        <h3>Beach houses</h3>
-                        <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis.
-                            Mauris tempus velit sem, sit amet imperdiet dolor placerat.</p>
-                    </div> <!-- end of navigation -->
-                    <div class="navigation navigation2">
-                        <span class="fa-stack">
-                            <i class="fa fa-circle fa-stack-2x icon-background"></i>
-                            <i class="fa fa-users fa-stack-1x"></i>
-                        </span>
-                        <h3>Community</h3>
-                        <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis.
-                            Mauris tempus velit sem, sit amet imperdiet dolor placerat.</p>
-                    </div> <!-- end of navigation -->
-                    <div class="navigation navigation3">
-                        <span class="fa-stack">
-                            <i class="fa fa-circle fa-stack-2x icon-background"></i>
-                            <i class="fa fa-file fa-stack-1x"></i>
-                        </span>
-                        <h3>Blog</h3>
-                        <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis.
-                            Mauris tempus velit
-                            sem, sit amet imperdiet dolor placerat.</p>
-                    </div> <!-- end of navigation -->
-                    <div class="navigation navigation4">
-                        <span class="fa-stack">
-                            <i class="fa fa-circle fa-stack-2x icon-background"></i>
-                            <i class="fa fa-phone fa-stack-1x"></i>
-                        </span>
-                        <h3>Get in Touch</h3>
-                        <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis.
-                            Mauris tempus velit
-                            sem, sit amet imperdiet dolor placerat.</p>
-                    </div> <!-- end of navigation -->
-                </div> <!-- end of wrapper -->
-            </section> <!-- end of middleNavigation -->
+                    <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                        <i class="fa fa-home fa-stack-1x"></i>
+                    </span>
 
-            <section class="planning">
+                    <h3>Beach houses</h3>
+                    <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis.
+                        Mauris tempus velit sem, sit amet imperdiet dolor placerat.</p>
+                </div> <!-- end of navigation -->
+                <div class="navigation navigation2">
+                    <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                        <i class="fa fa-users fa-stack-1x"></i>
+                    </span>
+                    <h3>Community</h3>
+                    <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis.
+                        Mauris tempus velit sem, sit amet imperdiet dolor placerat.</p>
+                </div> <!-- end of navigation -->
+                <div class="navigation navigation3">
+                    <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                        <i class="fa fa-file fa-stack-1x"></i>
+                    </span>
+                    <h3>Blog</h3>
+                    <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis.
+                        Mauris tempus velit
+                        sem, sit amet imperdiet dolor placerat.</p>
+                </div> <!-- end of navigation -->
+                <div class="navigation navigation4">
+                    <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                        <i class="fa fa-phone fa-stack-1x"></i>
+                    </span>
+                    <h3>Get in Touch</h3>
+                    <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis.
+                        Mauris tempus velit
+                        sem, sit amet imperdiet dolor placerat.</p>
+                </div> <!-- end of navigation -->
+            </div> <!-- end of wrapper -->
+        </section> <!-- end of middleNavigation -->
 
-                <div class="plan image">
-                    <img src="./assets/beach-final-images/left-image.jpg" alt="Sunny view of top floor of suite.">
+        <section class="planning">
+
+            <div class="plan image">
+                <img src="./assets/beach-final-images/left-image.jpg" alt="Sunny view of top floor of suite.">
+            </div>
+
+            <div class="plan text">
+                <div class="textContainer">
+                    <h2>Plan ahead</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare
+                        condimentum. Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex,</p>
+                    <button>Read More</button>
                 </div>
+            </div>
 
-                <div class="plan text">
-                    <div class="textContainer">
-                        <h2>Plan ahead</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare
-                            condimentum. Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex,</p>
-                        <button>Read More</button>
-                    </div>
+            <div class="location image">
+                <img src="./assets/beach-final-images/right-image.jpg" alt="Beautiful secluded beach and cove.">
+            </div>
+
+            <div class="location text">
+                <div class="textContainer">
+                    <h2>New Locations</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare
+                        condimentum. Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex,</p>
+                    <button>Read More</button>
                 </div>
+            </div>
 
-                <div class="location image">
-                    <img src="./assets/beach-final-images/right-image.jpg" alt="Beautiful secluded beach and cove.">
-                </div>
+        </section> <!-- end of planning -->
 
-                <div class="location text">
-                    <div class="textContainer">
-                        <h2>New Locations</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare
-                            condimentum. Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex,</p>
-                        <button>Read More</button>
-                    </div>
-                </div>
+        <section class="freeTrip">
 
-            </section> <!-- end of planning -->
+            <div class="freeTripImage">
+                <img src="./assets/beach-final-images/banner-image.jpg"
+                    alt="Bird's eye view of the resort suites by the beach.">
+            </div> <!-- end of freeTripImage -->
 
-            <section class="freeTrip">
+            <div class="wrapper">
+                <div class="freeTripText">
+                    <h2>Free trip with Beachstays</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare condimentum.
+                        Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex, porttitor nec iaculis
+                        at, consectetur vel turpis. Vestibulum ultricies, felis in lacinia porttitor, tortor metus
+                        convallis augue, at fermentum diam erat nec quam. Nulla facilisi.</p>
+                    <button>Find Out More</button>
+                </div> <!-- end of freeTripText -->
+            </div> <!-- end of wrapper -->
 
-                <div class="freeTripImage">
-                    <img src="./assets/beach-final-images/banner-image.jpg" alt="Bird's eye view of the resort suites by the beach.">
-                </div> <!-- end of freeTripImage -->
-
-                <div class="wrapper">
-                    <div class="freeTripText">
-                        <h2>Free trip with Beachstays</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare condimentum.
-                            Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex, porttitor nec iaculis
-                            at, consectetur vel turpis. Vestibulum ultricies, felis in lacinia porttitor, tortor metus
-                            convallis augue, at fermentum diam erat nec quam. Nulla facilisi.</p>
-                        <button>Find Out More</button>
-                    </div> <!-- end of freeTripText -->
-                </div> <!-- end of wrapper -->
-
-            </section> <!-- end of freeTrip -->
+        </section> <!-- end of freeTrip -->
 
     </main>
     
     <footer>
         <p>Created at Juno College 2021</p>
     </footer>
-
+    <script src="./script.js"></script>
 </body>
 
 </html>

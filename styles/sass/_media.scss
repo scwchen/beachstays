@@ -20,7 +20,8 @@
         }
     }
     
-    .gallery .imageContainer,
+    // Removed this from the media query as it is not needed with the image carousel
+    // .gallery .imageContainer,
     .middleNavigation .wrapper,
     .planning,
     .blog,
@@ -140,6 +141,11 @@
     .aboutTextBox {
         text-align: center;
     }
+
+    // .gallery .imageContainer img {
+    //     max-width: 35vw;
+    //     max-height: 35vw;
+    // }
 
     .freeTrip .wrapper .freeTripText {
         padding-left: 0;
