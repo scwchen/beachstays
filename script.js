@@ -1,86 +1,134 @@
-// ===========================================
-// Adding an image carousel in the gallery on the Beachstays home page
-// ===========================================
+const app = {};
 
-// Selecting the navigation arrows
-const arrows = document.querySelectorAll('.arrow');
+app.menuButton = document.querySelector('.menu-button');
+app.menuOpen = false;
 
-// Add an event listener to the navigation arrows to allow for the updating of the shown images 
-// I wanted to add the same listener to each arrow but slightly tweaked so I used a forEach to apply the same logic to both
-arrows.forEach((arrow) => {
-    arrow.addEventListener('click', function () {
-        
-        // A disable timeout so the carousel buttons are not spammed
-        this.disabled = true;
-        setTimeout(() => {
-            this.disabled = false;
-        }, 500);
+app.init = () => {
 
-        // getting the direction based on whichever button is pretty
-        const direction = this.classList[0].replace('Arrow', '');
-        movePics(direction);
-    });
-});
-
-// Function to find which of the current image containers is active and visible in the carousel
-const getActive = () => {
-    const galleryImages = document.getElementsByClassName('galleryImage');
-
-    // forEach apparently does not work for a Nodelist
-    for (image of galleryImages) {
-        if (image.classList[2] === 'active') {
-            return image.classList[1].replace('image', '');
-        }
-    }
+    app.addArrowEventListener();
+    app.menuEventListener();
+    app.menuItemEventListener();
 };
 
-const movePics = (direction) => {
+// Add an event listener to the navigation arrows to allow for the updating of the shown images 
+app.addArrowEventListener = () => {
+    const arrows = document.querySelectorAll('.arrow');
+    arrows.forEach((arrow) => {
+        arrow.addEventListener('click', function () {
+
+            // A disable timeout so the carousel buttons are not spammed
+            this.disabled = true;
+            setTimeout(() => {
+                this.disabled = false;
+            }, 250);
+
+            // getting the direction based on whichever button is pressed
+            const direction = this.classList[0].replace('-arrow', '');
+            app.movePics(direction);
+        });
+    });
+};
+
+// Function to find which of the current image containers is active and visible in the carousel
+app.getActive = () => {
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    let activeImage = 0;
+
+    galleryImages.forEach((image, index) => {
+
+        if (image.classList.contains('active')) {
+            activeImage = index + 1;
+        }
+    });
+
+    return activeImage;
+};
+
+app.movePics = (direction) => {
     // getting active index
-    const active = parseInt(getActive());
+    const active = parseInt(app.getActive());
 
     // getting the selector for the active image
     const activeImage = document.querySelector(`.image${active}`);
     const activeCircle = document.querySelector(`.circle${active}`);
 
+    let nextImage = null;
+    let nextCircle = null;
+
     if (direction === 'left') {
-        // Only if the carousel is not all the way to the left already
-        if (active !== 1) {
-            // getting the selector for the previous (left) image and tracker circle
-            const prevImage = document.querySelector(`.image${active - 1}`);
-            const prevCircle = document.querySelector(`.circle${active - 1}`);
+        nextImage = document.querySelector(`.image${active - 1}`);
+        nextCircle = document.querySelector(`.circle${active - 1}`);
 
-            activeImage.classList.toggle('active');
-            activeImage.classList.toggle('right');
-            activeCircle.classList.toggle('fas');
-            activeCircle.classList.toggle('far');
-
-            // with this logic the prevImage and prevCircle will always be 'left' of the active
-            prevImage.classList.toggle('active');
-            prevImage.classList.toggle('left');
-            prevCircle.classList.toggle('fas');
-            prevCircle.classList.toggle('far');
-
+        if (active === 1) {
+            nextImage = document.querySelector(`.image5`);
+            nextCircle = document.querySelector(`.circle5`);
         }
+
     } else if (direction = 'right') {
-        // Only if the carousel is not all the way to the right already
-        if (active !== 5) {
-            // getting the selector for the next (right) image and tracker circle
-            const nextImage = document.querySelector(`.image${active + 1}`);
-            const nextCircle = document.querySelector(`.circle${active + 1}`);
+        nextImage = document.querySelector(`.image${active + 1}`);
+        nextCircle = document.querySelector(`.circle${active + 1}`);
 
-            activeImage.classList.toggle('active');
-            activeImage.classList.toggle('left');
-            activeCircle.classList.toggle('fas');
-            activeCircle.classList.toggle('far');
-
-            // with this logic the nextImage and nextCircle will always be 'right' of the active
-            nextImage.classList.toggle('active');
-            nextImage.classList.toggle('right');
-            nextCircle.classList.toggle('fas');
-            nextCircle.classList.toggle('far');
+        if (active === 5) {
+            nextImage = document.querySelector(`.image1`);
+            nextCircle = document.querySelector(`.circle1`);
         }
     }
-    
-    
 
+    activeImage.classList.remove('active');
+    nextImage.classList.add('active');
+    activeCircle.classList.remove('fas');
+    activeCircle.classList.add('far');
+    nextCircle.classList.remove('far');
+    nextCircle.classList.add('fas');
 };
+
+app.menuShow = () => {
+    const headerNav = document.querySelector('.header-nav .nav-list')
+
+    if (window.innerWidth <= 940) {
+        if (!app.menuOpen) {
+            app.menuButton.classList.add('open');
+            app.menuButton.ariaLabel = "Menu Open";
+            app.menuOpen = true;
+            headerNav.style.maxHeight = `${headerNav.scrollHeight}px`;
+        } else {
+            app.menuButton.classList.remove('open');
+            app.menuButton.ariaLabel = "Menu Closed";
+            app.menuOpen = false;
+            headerNav.style.maxHeight = null;
+        }
+    }
+
+}
+
+// Adding event listen to hide the menu when any of the nav list items are selected
+app.menuItemEventListener = () => {
+    const navList = document.querySelectorAll('.header-nav .nav-list a');
+    navList.forEach((navItem) => {
+        navItem.addEventListener('click', app.menuShow);
+    });
+}
+
+// Adding event listener to the show menu on mobile
+app.menuEventListener = () => {
+    app.menuButton.addEventListener('click', app.menuShow);
+}
+
+// // Add blog submission listener
+// app.submitCommentHandler = () => {
+//     const submitComment = document.querySelector('.submit-comment');
+//     submitComment.addEventListener('submit', {
+
+//     });
+// };
+
+// // Add contact submission listener
+// app.submitContactHandler = () => {
+//     const submitContact = document.querySelector('.submit-contact');
+//     submitContact.addEventListener('submit', {
+    
+//     });
+// };
+
+app.init();

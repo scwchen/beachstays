@@ -1,20 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display+SC:ital,wght@1,900&display=swap");
+
 // Colours
-$greenishCyan: #50E3C2;
-$black: #2C2C2C;
-$iceBlue: #FAFFFE;
+$greenishCyan: #50e3c2;
+$black: #2c2c2c;
+$iceBlue: #fafffe;
 $twilightBlue: #063974;
-$lightBlue: #D2F9F1;
-$spruce: #0C5F4C;
+$lightBlue: #d2f9f1;
+$spruce: #0c5f4c;
 
 // Fonts
-$lato: 'Lato', sans-serif;
-$playFair: 'Playfair Display SC', serif;
+$lato: "Lato", sans-serif;
+$playFair: "Playfair Display SC", serif;
+
+// Misc
+$hamburger-patty: 35px;
 
 // Using a few different sets of stylings for headers and such with similar formats
 @mixin fontStyles($size, $lineHeight, $letterSpacing) {
     font-size: $size;
     letter-spacing: $letterSpacing;
     line-height: $lineHeight;
+}
+
+@mixin hamburger {
+    width: $hamburger-patty;
+    height: 4px;
+    background: $greenishCyan;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
 /* ===========================================
@@ -24,10 +37,10 @@ GENERAL & TYPOGRAPHY
 // Made some changes from the style guide for what seems to work a little more aesthetically
 html {
     font-size: 125%;
-} 
+}
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     color: $black;
     @include fontStyles(1rem, 1.6rem, 2px);
     max-width: 1920px;
@@ -46,20 +59,21 @@ nav {
 }
 
 // headerNavs are the same throughout the pages
-.headerNav {
+.header-nav {
     justify-content: space-between;
     padding: 20px 0;
     align-items: center;
     display: flex;
     text-transform: uppercase;
     position: relative;
-    ul {
+    .nav-list {
+        transition: max-height 0.3s ease-in-out;
         display: flex;
     }
     .logo {
-    font-family: $playFair;
-    font-size: 1.7rem; // 30px
-    color: $greenishCyan;
+        font-family: $playFair;
+        font-size: 1.7rem; // 30px
+        color: $greenishCyan;
     }
     li {
         margin-left: 50px;
@@ -67,50 +81,25 @@ nav {
             color: $iceBlue;
         }
     }
-
 }
 
-.headerNav label {
-    font-size: 1.5rem;
-    color: $greenishCyan;
-    display: none;
-}
-
-input[type=checkbox] {
-    display: none;
-}
-
-.mobileNav:checked + ul {
-    display: block;
-    flex-direction: column;
-    background-color: rgba(6, 57, 116, 0.4); // twilight blue with lowered opacity
-    position: absolute;
-    right: 0;
-    top: 60px;
-
-    & li {
-        margin: 0;
-        padding: 10px 15px;
-    }
-}
-    
 h1 {
     @include fontStyles(4.35rem, 8.5rem, 9px);
     color: $iceBlue;
 }
 
 h2 {
-    @include fontStyles(1.75rem, 2.9rem, 3.6px); 
+    @include fontStyles(1.75rem, 2.9rem, 3.6px);
     color: $spruce;
 }
 
 h3 {
-    @include fontStyles(1.5rem, 2.9rem, 3.0px);
+    @include fontStyles(1.5rem, 2.9rem, 3px);
     color: $spruce;
 }
 
 h4 {
-    @include fontStyles(1.1rem, 1.45rem, 1px)
+    @include fontStyles(1.1rem, 1.45rem, 1px);
 }
 
 ul {
@@ -123,7 +112,8 @@ a {
     text-decoration: none;
 }
 
-button {
+button[type=submit],
+.navigation-a {
     border: none;
     font-family: $playFair;
     @include fontStyles(1rem, 1.6rem, 1px);
@@ -131,12 +121,23 @@ button {
     background-color: $twilightBlue;
     color: $iceBlue;
     padding: 10px 15px;
+    cursor: pointer;
+    &:hover {
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        background-color: $greenishCyan;
+        color: $twilightBlue;
+    }
 }
 
-input, textarea {
+.navigation-a {
+    display: inline-block;
+}
+
+input,
+textarea {
     border: none;
     border-bottom: 2px solid $greenishCyan;
-    @include fontStyles (1rem, 1.6rem, 2px);
+    @include fontStyles(1rem, 1.6rem, 2px);
     padding: 25px 35px;
     opacity: 0.7;
 }
@@ -145,4 +146,50 @@ img {
     max-width: 100%;
     display: block;
     height: auto;
+}
+
+/* ===========================================
+MENU BUTTON
+=========================================== */
+
+.menu-button {
+    display: none;
+    position: relative;
+    padding: 0;
+    width: $hamburger-patty;
+    height: $hamburger-patty;
+    border: none;
+    color: $greenishCyan;
+    background: none;
+}
+
+.hamburger-menu {
+    @include hamburger;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    @include hamburger;
+}
+
+.hamburger-menu::before {
+    transform: translateY(-10px);
+}
+.hamburger-menu::after {
+    transform: translateY(10px);
+}
+
+.menu-button.open .hamburger-menu {
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.menu-button.open .hamburger-menu::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-button.open .hamburger-menu::after {
+    transform: rotate(-45deg) translate(35px, 35px);
 }

@@ -2,21 +2,22 @@
 HEADER
 =========================================== */
 
-.homeHeader {
+.home-header {
     height: 90vh;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
 }
 
-.homeHeaderBox {
+.home-header-container {
     background: url("../assets/beach-final-images/home-image-1.jpg") no-repeat;
     background-size: cover;
     position: relative;
     grid-row: 1 / 11;
     grid-column: 1 / -1;
 
-    .homeNav a[href="#home"] {
+    .home-nav a:hover {
+        transition: color 0.3s ease-in-out;
         color: $greenishCyan;
     }
 
@@ -37,7 +38,7 @@ HEADER
     }
 }
 
-.homeHeaderBoxImage {
+.home-header-container-image {
     grid-row: -1 / 5;
     grid-column: 1 / 6;
     z-index: 10;
@@ -59,13 +60,13 @@ MAIN
         display: flex;
         align-items: center;
     }
-    .aboutText {
+    .about-text {
         display: flex;
         flex-direction: column;
         flex: 1 0 70%;
     }
 
-    .aboutTextBox {
+    .about-text-container {
         
         p {
             padding-right: 50px;
@@ -75,7 +76,7 @@ MAIN
         }
     }
 
-    .aboutImage {
+    .about-image {
         box-shadow: -20px 20px  $greenishCyan;
     }
 }
@@ -89,14 +90,14 @@ GALLERY & IMAGE CAROUSEL
     padding: 75px 0;
     background-color: $lightBlue;
     position: relative;
-    .carouselTracker {
+    .carousel-tracker {
         display: flex;
         justify-content: center;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
         color: rgba(6, 57, 116, 0.8);
-        padding: 2%;
+        padding: 2vh;
         i {
             padding: 0 2vw;
         }
@@ -104,12 +105,12 @@ GALLERY & IMAGE CAROUSEL
 }
 
 // This has changed from the original. Now I no longer need grid.
-.imageContainer {
+.image-container {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    .galleryImage {
+    .gallery-image {
         display: flex;
         justify-content: center;
         width: 60vw;
@@ -153,11 +154,11 @@ GALLERY & IMAGE CAROUSEL
             cursor: pointer;
         }
     }
-    .leftArrow {
+    .left-arrow {
         left: 0;
     }
 
-    .rightArrow {
+    .right-arrow {
         right: 0;
     }
 }
@@ -166,11 +167,11 @@ GALLERY & IMAGE CAROUSEL
 MIDDLE NAVIGATION
 =========================================== */
 
-.middleNavigation {
+.middle-navigation {
     margin: 10% 0 15%;
 }
 
-.middleNavigation .wrapper {
+.middle-navigation .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     .navigation {
@@ -226,7 +227,7 @@ PLAN AHEAD
             bottom: -30px;
             box-shadow: -20px 20px $greenishCyan;
         }
-        &.text .textContainer{
+        &.text .text-container{
             text-align: right;
         }
     }
@@ -237,7 +238,7 @@ PLAN AHEAD
     display: flex;
     align-items: center;
 
-    .textContainer > * {
+    .text-container > * {
         margin: 10px 0; 
     }
 }
@@ -246,14 +247,14 @@ PLAN AHEAD
 FREE TRIP
 =========================================== */
 
-.freeTripImage img {
+.free-trip-image img {
     width: 100%;
 }
 
-.freeTrip .wrapper {
+.free-trip .wrapper {
     display: flex;
     flex-direction: column;
-    .freeTripText {
+    .free-trip-text {
         text-align: center; 
         padding: 10% 10% 15%;
         & > * {
