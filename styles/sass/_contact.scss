@@ -2,11 +2,12 @@
 CONTACT 
 =========================================== */
 
-.contactHeader {
+.contact-header {
     background: url("../assets/beach-final-images/contact-image-1.jpg") no-repeat;
     background-size: cover;
     height: 70vh;
-    .contactNav a[href="#contact"] {
+    .contact-nav a:hover {
+        transition: color 0.3s ease-in-out;
         color: $greenishCyan;
     }
     margin-bottom: -40vh;
@@ -17,15 +18,14 @@ CONTACT
     grid-template-columns: 75% 20%;
     grid-column-gap: 5%;
     grid-template-rows: 30vh 1fr;
-    
-    .contactSection {
+
+    .contact-section {
         grid-area: 1 / 1 / -1 / 2;
         padding-bottom: 15%;
     }
-    
 }
 
-.formBox {
+.form-box {
     background: white;
     padding: 8%;
     position: relative;
@@ -33,12 +33,12 @@ CONTACT
     box-shadow: 30px 30px 0px -10px $greenishCyan;
 }
 
-.contactForm {
+.contact-form {
     display: grid;
     grid-template-columns: 47% 47%;
     grid-column-gap: 6%;
     grid-row-gap: 40px;
-    
+
     textarea,
     button {
         grid-column: 1 / -1;
@@ -48,28 +48,21 @@ CONTACT
         height: 200px;
         border: 2px solid $greenishCyan;
     }
-
 }
 
 /* ===========================================
 CONTACT INFO - ASIDE
 =========================================== */
 
-.contactInfo {
+.contact-info {
     grid-area: 2 / 2 / -1 / -1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    .favicons ul {
-        display: flex;
-        li {
-            padding: 5px 10% 5px 0;
-            font-size: 1.3rem;
-        }
-    }
+
     h4 {
         color: $black;
-        @include fontStyles (1.3rem, 1.5rem, 2px);
+        @include fontStyles(1.3rem, 1.5rem, 2px);
     }
     & > * {
         padding: 5px 0;
@@ -79,3 +72,21 @@ CONTACT INFO - ASIDE
     }
 }
 
+.favicons {
+    ul {
+        display: flex;
+        li {
+            padding: 5px 10% 5px 0;
+            font-size: 1.3rem;
+        }
+    }
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+            transition: color 0.3s ease-in-out;
+            color: $greenishCyan;
+        }
+    }
+}

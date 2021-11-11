@@ -7,46 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beachstays</title>
     <script src="https://kit.fontawesome.com/69d6599dec.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display+SC:ital,wght@1,900&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
-    <header class="homeHeader">
-        <div class="homeHeaderBox">
+    <header class="home-header">
+        <div class="home-header-container">
             <div class="wrapper">
-                <nav class="headerNav homeNav">
+                <nav class="header-nav home-nav">
                     <p class="logo">Beachstays</p>
-                    <label for="hamburger"><i class="fas fa-bars"></i></label>
-                    <input class="mobileNav" type="checkbox" name="hamburger" id="hamburger" autocomplete="off">
-                    <ul class="navList">
-                        <li><a href="#home">Home</a></li>
+                    <ul class="nav-list">
+                        <li><a href="">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="./blogPost.html">Blog</a></li>
+                        <li><a href="./blog-post.html">Blog</a></li>
                         <li><a href="./contact.html">Contact</a></li>
                     </ul>
+                    <button class="menu-button" aria-label="Menu Closed">
+                        <div class="hamburger-menu" aria-hidden="true"></div>
+                    </button>
                 </nav>
 
                 <h1>welcome to <span>Beachstays</span></h1>
 
             </div> <!-- end of wrapper -->
-        </div> <!-- end of homeHeaderBox -->
+        </div> <!-- end of home-header-container -->
 
-        <div class="homeHeaderBoxImage">
+        <div class="home-header-container-image">
             <img src="./assets/beach-final-images/header-box.jpg" alt="Sunglasses on the beach.">
-        </div> <!-- end of homeHeaderBoxImage -->
-    </header> <!-- end of homeHeader -->
+        </div> <!-- end of home-header-container-image -->
+    </header> <!-- end of home-header -->
 
     <main>
 
         <section id="about" class="about">
             <div class="wrapper">
-                <div class="aboutText">
-                    <div class="aboutTextBox">
+                <div class="about-text">
+                    <div class="about-text-container">
                         <h2>Visit Guyana</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla
                             elementum
@@ -56,13 +52,13 @@
                             elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum
                             orci
                             quis convallis.</p>
-                        <button>Find Out More</button>
+                        <a class="navigation-a" href="./blog-post.html">Find Out More</a>
                     </div>
-                </div> <!-- end of aboutText -->
+                </div> <!-- end of about-text -->
 
-                <div class="aboutImage">
+                <div class="about-image">
                     <img src="./assets/beach-final-images/small-box.jpg" alt="Luxury suite overlooking the ocean.">
-                </div> <!-- end of aboutImage -->
+                </div> <!-- end of about-image -->
             </div> <!-- end of wrapper -->
         </section> <!-- end of about -->
 
@@ -70,25 +66,25 @@
 
         <section class="gallery">
             <div class="wrapper">
-                <div class="imageContainer">
+                <div class="image-container">
                     <!-- added chevrons -->
-                    <button class="leftArrow arrow"><i class="fas fa-chevron-left"></i></button>
-                    <button class="rightArrow arrow"><i class="fas fa-chevron-right"></i></button>
+                    <button class="left-arrow arrow"><i class="fas fa-chevron-left"></i></button>
+                    <button class="right-arrow arrow"><i class="fas fa-chevron-right"></i></button>
                     <!-- just added some of the existing assets to the gallery images -->
-                    <div class="galleryImage image1 left"><img src="./assets/beach-final-images/left-image.jpg"
+                    <div class="gallery-image image1"><img src="./assets/beach-final-images/left-image.jpg"
                             alt="Sunny view of top floor of suite."></div>
-                    <div class="galleryImage image2 left"><img src="./assets/beach-final-images/gallery-image1.jpg"
+                    <div class="gallery-image image2"><img src="./assets/beach-final-images/gallery-image1.jpg"
                             alt="Evening view of an oceanside suite."></div>
-                    <div class="galleryImage image3 active"><img src="./assets/beach-final-images/gallery-image2.jpg"
+                    <div class="gallery-image image3 active"><img src="./assets/beach-final-images/gallery-image2.jpg"
                             alt="Secluded rear entrance of private suite."></div>
-                    <div class="galleryImage image4 right"><img src="./assets/beach-final-images/gallery-image3.jpg"
+                    <div class="gallery-image image4"><img src="./assets/beach-final-images/gallery-image3.jpg"
                             alt="View of suite from the beach."></div>
-                    <div class="galleryImage image5 right"><img src="./assets/beach-final-images/right-image.jpg"
+                    <div class="gallery-image image5"><img src="./assets/beach-final-images/right-image.jpg"
                             alt="Beautiful secluded beach and cove."></div>
-                </div> <!-- end of imageContainer -->
+                </div> <!-- end of image-container -->
             </div> <!-- end of wrapper -->
 
-            <div class="carouselTracker">
+            <div class="carousel-tracker">
                 <!-- <i class="fas fa-circle"></i> -->
                 <i class="far fa-circle circle1"></i>
                 <i class="far fa-circle circle2"></i>
@@ -98,7 +94,7 @@
             </div>
         </section> <!-- end of gallery -->
 
-        <section class="middleNavigation">
+        <section class="middle-navigation">
             <div class="wrapper">
                 <div class="navigation navigation1">
 
@@ -141,7 +137,7 @@
                         sem, sit amet imperdiet dolor placerat.</p>
                 </div> <!-- end of navigation -->
             </div> <!-- end of wrapper -->
-        </section> <!-- end of middleNavigation -->
+        </section> <!-- end of middle-navigation -->
 
         <section class="planning">
 
@@ -150,11 +146,11 @@
             </div>
 
             <div class="plan text">
-                <div class="textContainer">
+                <div class="text-container">
                     <h2>Plan ahead</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare
                         condimentum. Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex,</p>
-                    <button>Read More</button>
+                    <a class="navigation-a" href="./blog-post.html">Read More</a>
                 </div>
             </div>
 
@@ -163,40 +159,40 @@
             </div>
 
             <div class="location text">
-                <div class="textContainer">
+                <div class="text-container">
                     <h2>New Locations</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare
                         condimentum. Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex,</p>
-                    <button>Read More</button>
+                    <a class="navigation-a" href="./blog-post.html">Read More</a>
                 </div>
             </div>
 
         </section> <!-- end of planning -->
 
-        <section class="freeTrip">
+        <section class="free-trip">
 
-            <div class="freeTripImage">
+            <div class="free-trip-image">
                 <img src="./assets/beach-final-images/banner-image.jpg"
                     alt="Bird's eye view of the resort suites by the beach.">
-            </div> <!-- end of freeTripImage -->
+            </div> <!-- end of free-trip-image -->
 
             <div class="wrapper">
-                <div class="freeTripText">
+                <div class="free-trip-text">
                     <h2>Free trip with Beachstays</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare condimentum.
                         Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex, porttitor nec iaculis
                         at, consectetur vel turpis. Vestibulum ultricies, felis in lacinia porttitor, tortor metus
                         convallis augue, at fermentum diam erat nec quam. Nulla facilisi.</p>
-                    <button>Find Out More</button>
-                </div> <!-- end of freeTripText -->
+                    <a class="navigation-a" href="./blog-post.html">Find Out More</a>
+                </div> <!-- end of free-trip-text -->
             </div> <!-- end of wrapper -->
 
-        </section> <!-- end of freeTrip -->
+        </section> <!-- end of free-trip -->
 
     </main>
     
     <footer>
-        <p>Created at Juno College 2021</p>
+        <p>Created at <a href="https://junocollege.com/" rel="noopener noreferrer">Juno College</a> 2021</p>
     </footer>
     <script src="./script.js"></script>
 </body>
