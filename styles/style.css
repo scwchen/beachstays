@@ -578,10 +578,10 @@ GALLERY & IMAGE CAROUSEL
   max-height: 300px;
   position: absolute;
   opacity: 0;
-  -webkit-transition: opacity 500ms, -webkit-transform 500ms;
-  transition: opacity 500ms, -webkit-transform 500ms;
-  transition: transform 500ms, opacity 500ms;
-  transition: transform 500ms, opacity 500ms, -webkit-transform 500ms;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
 }
 .image-container .gallery-image img {
   -o-object-fit: cover;
