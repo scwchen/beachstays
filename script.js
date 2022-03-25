@@ -74,13 +74,16 @@ app.movePics = (direction) => {
             nextCircle = document.querySelector(`.circle1`);
         }
     }
+    nextImage.classList.add('active');
+    nextCircle.classList.add('fas');
+    activeCircle.classList.add('far');
+
 
     activeImage.classList.remove('active');
-    nextImage.classList.add('active');
     activeCircle.classList.remove('fas');
-    activeCircle.classList.add('far');
     nextCircle.classList.remove('far');
-    nextCircle.classList.add('fas');
+
+
 };
 
 app.menuShow = () => {
@@ -127,7 +130,7 @@ app.menuEventListener = () => {
 // app.submitContactHandler = () => {
 //     const submitContact = document.querySelector('.submit-contact');
 //     submitContact.addEventListener('submit', {
-    
+
 //     });
 // };
 
