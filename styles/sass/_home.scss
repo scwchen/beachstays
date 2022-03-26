@@ -128,18 +128,9 @@ GALLERY & IMAGE CAROUSEL
     .active {
         position: relative;
         opacity: 1;
-        z-index: 100;
+        z-index: 100; // to make sure the active image is the first in the 'stack'
     }
     
-    .left {
-        transform: translateX(-100%);
-    }
-
-    .right {
-        transform: translateX(100%);
-    }
-    
-
     .arrow {
         display: inline-block;
         color: #D2F9F1;
@@ -148,7 +139,7 @@ GALLERY & IMAGE CAROUSEL
         background: rgba(6, 57, 116, 0.8);
         transform: translateY(-50%);
         top: 50%;
-        z-index: 10; // to make sure they are always above the images
+        z-index: 10;
         &:hover,
         &:focus-within {
             cursor: pointer;

@@ -592,14 +592,7 @@ GALLERY & IMAGE CAROUSEL
 .image-container .active {
   position: relative;
   opacity: 1;
-}
-.image-container .left {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-.image-container .right {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  z-index: 100;
 }
 .image-container .arrow {
   display: inline-block;
