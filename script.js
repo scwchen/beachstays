@@ -29,60 +29,67 @@ app.addArrowEventListener = () => {
     });
 };
 
+// ===========================================
 // Function to find which of the current image containers is active and visible in the carousel
-app.getActive = () => {
-    const galleryImages = document.querySelectorAll('.gallery-image');
+// ===========================================
+// Looking back on this now, this is hilariously inefficient but a good reminder of how far I've come.
 
-    let activeImage = 0;
+// app.getActive = () => {
+//     const galleryImages = document.querySelectorAll('.gallery-image');
 
-    galleryImages.forEach((image, index) => {
+//     let activeImage = 0;
 
-        if (image.classList.contains('active')) {
-            activeImage = index + 1;
-        }
-    });
+//     galleryImages.forEach((image, index) => {
 
-    return activeImage;
-};
+//         if (image.classList.contains('active')) {
+//             activeImage = index + 1;
+//         }
+//     });
+
+//     return activeImage;
+// };
 
 app.movePics = (direction) => {
-    // getting active index
-    const active = parseInt(app.getActive());
+    // Carousel and Tracker elements
+    const carousel = document.querySelector('.carousel-images');
+    const carouselTracker = document.querySelector('.carousel-tracker')
 
-    // getting the selector for the active image
-    const activeImage = document.querySelector(`.image${active}`);
-    const activeCircle = document.querySelector(`.circle${active}`);
+    // Image and Circle nodelists
+    const images = carousel.querySelectorAll('.gallery-image');
+    const circles = carouselTracker.querySelectorAll('.fa-circle');
 
-    let nextImage = null;
-    let nextCircle = null;
+    // Getting the active image and circle
+    const activeImage = carousel.querySelector('.active');
+    const activeCircle = carouselTracker.querySelector('.fas');
+
+    let nextImage, nextCircle;
 
     if (direction === 'left') {
-        nextImage = document.querySelector(`.image${active - 1}`);
-        nextCircle = document.querySelector(`.circle${active - 1}`);
+        nextImage = activeImage.previousElementSibling;
+        nextCircle = activeCircle.previousElementSibling;
 
-        if (active === 1) {
-            nextImage = document.querySelector(`.image5`);
-            nextCircle = document.querySelector(`.circle5`);
+        if (!nextImage) {
+            nextImage = images[images.length - 1];
+            nextCircle = circles[circles.length - 1];
         }
 
-    } else if (direction = 'right') {
-        nextImage = document.querySelector(`.image${active + 1}`);
-        nextCircle = document.querySelector(`.circle${active + 1}`);
+    } else if (direction === 'right') {
+        nextImage = activeImage.nextElementSibling;
+        nextCircle = activeCircle.nextElementSibling;
 
-        if (active === 5) {
-            nextImage = document.querySelector(`.image1`);
-            nextCircle = document.querySelector(`.circle1`);
+        if (!nextImage) {
+            nextImage = images[0];
+            nextCircle = circles[0];
         }
     }
+
     nextImage.classList.add('active');
     nextCircle.classList.add('fas');
     activeCircle.classList.add('far');
 
-
     activeImage.classList.remove('active');
     activeCircle.classList.remove('fas');
     nextCircle.classList.remove('far');
-
 
 };
 
